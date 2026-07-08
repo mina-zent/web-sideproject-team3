@@ -1,6 +1,6 @@
 import { css } from 'styled-system/css';
 
-import { fetchApiHealth } from '@/lib/api';
+import { fetchApiHealth } from '@/shared/api';
 
 // API 연결 상태 배지 문구
 const LABEL_CONNECTED = '✅ API 연결됨';

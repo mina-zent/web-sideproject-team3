@@ -1,10 +1,15 @@
 import Image from 'next/image';
+
+import { ApiHealthStatus } from '@/components/ApiHealthStatus';
+
 import styles from './page.module.css';
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
+        {/* 백엔드 연결 테스트 — apps/api 헬스체크 결과 표시 */}
+        <ApiHealthStatus />
         <Image
           className={styles.logo}
           src="/next.svg"

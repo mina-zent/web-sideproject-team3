@@ -219,14 +219,14 @@ web-sideproject-team3/
 5. **팀원 브랜치 충돌**: 커밋 1의 디렉토리 이동은 진행 중인 다른 브랜치와 충돌 가능성이
    크다 — 팀에 공지 후 빠르게 머지하는 것을 권장.
 
-## 7. 검증 체크리스트
+## 7. 검증 체크리스트 (2026-07-08 완료)
 
-- [ ] `pnpm install` 클린 설치 성공
-- [ ] `pnpm dev:web` → 기존 Next 화면 정상 (구조 이동 후 회귀 없음)
-- [ ] `pnpm dev:api` → `GET /api/health` 200
-- [ ] `pnpm dev` → 프론트 페이지에서 API 연결 상태 확인
-- [ ] `pnpm lint` 통과 (web, api 모두)
-- [ ] 커밋이 단계별로 분리되어 있고 각 커밋 시점에 빌드 가능
+- [x] `pnpm install` 클린 설치 성공
+- [x] `pnpm dev:web` → 기존 Next 화면 정상 (구조 이동 후 회귀 없음, HTTP 200)
+- [x] `pnpm dev:api` → `GET /api/health` 200 (`{"status":"ok","service":"api",...}`)
+- [x] `pnpm dev` → 프론트 페이지에 "API 연결됨" 표시, api 종료 시 "API 연결 안 됨" 표시
+- [x] `pnpm lint` 통과 (web, api 모두)
+- [x] 커밋이 단계별로 분리되어 있고 각 커밋 시점에 빌드 가능 (`pnpm build` 통과)
 
 ## 8. 결정 포인트 (✅ 확정)
 

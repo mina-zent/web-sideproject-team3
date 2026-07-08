@@ -1,10 +1,10 @@
 import Image from 'next/image';
 
-import { ApiHealthStatus } from '@/components/ApiHealthStatus';
+import { ApiHealthStatus } from './ApiHealthStatus';
+import styles from './HomePage.module.css';
 
-import styles from './page.module.css';
-
-export default function Home() {
+// 홈 화면 본체 — 라우팅(app/page.tsx)에서 위임받아 렌더링한다
+export function HomePage() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>

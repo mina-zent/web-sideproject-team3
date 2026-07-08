@@ -221,15 +221,18 @@ apps/web/
 6. **팀 타이밍**: 커밋 2의 구조 이동은 진행 중인 FE 브랜치와 충돌 가능 — 공지 후
    빠르게 머지한다.
 
-## 7. 검증 체크리스트
+## 7. 검증 체크리스트 (2026-07-08 완료)
 
-- [ ] `pnpm install` 시 styled-system 자동 생성 (클린 클론 기준)
-- [ ] `pnpm dev` → 홈 화면 + API 연결 상태 회귀 없음
-- [ ] 다크/라이트 모드 스타일 회귀 없음 (Panda 전환 후)
-- [ ] `pnpm build` 통과 (web, api)
-- [ ] `pnpm lint` + FSD 경계 검사 통과
-- [ ] CSS Modules 파일 잔존 0개 (결정 3에서 전부 전환 선택 시)
-- [ ] 커밋이 단계별로 분리되어 있고 각 커밋 시점에 빌드 가능
+- [x] `pnpm install` 시 styled-system 자동 생성 (prepare 훅 동작 확인)
+- [x] `pnpm dev` → 홈 화면 + "API 연결됨" 표시 회귀 없음
+- [x] 다크/라이트 모드 규칙 컴파일 CSS에 동일 반영 (prefers-color-scheme·모바일 브레이크포인트 확인)
+- [x] `pnpm build` 통과 (web, api)
+- [x] `pnpm lint` 통과 — eslint + steiger "No problems found"
+- [x] CSS Modules 파일 잔존 0개
+- [x] 커밋이 단계별로 분리되어 있고 각 커밋 시점에 빌드 가능
+
+> 참고: Steiger가 `_pages` 프리픽스를 오탈자로 오탐하여
+> `fsd/typo-in-layer-name` 룰만 비활성화함 (공식 Next 충돌 회피 관례).
 
 ## 8. 결정 포인트 (✅ 확정)
 

@@ -1,3 +1,6 @@
+/* Panda CSS 레이어 선언 — PostCSS 플러그인이 이 지점에 스타일을 주입한다 */
+@layer reset, base, tokens, recipes, utilities;
+
 :root {
   --background: #ffffff;
   --foreground: #171717;

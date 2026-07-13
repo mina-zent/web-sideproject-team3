@@ -1,13 +1,30 @@
 # Gemini Code Assist 설정
 # https://developers.google.com/gemini-code-assist/docs/customize-gemini-behavior-github
+
+# 리뷰 코멘트에 이모지·유머 섞는 기능. 끔.
 have_fun: false
+
+# 리뷰 대상에서 제외할 파일 (glob 패턴)
 ignore_patterns:
   - "pnpm-lock.yaml"
+
 code_review:
+  # true로 바꾸면 자동 코드리뷰 기능 전체가 꺼짐
   disable: false
+
+  # 이 심각도 이상인 지적만 코멘트로 남김. LOW → MEDIUM → HIGH → CRITICAL 순.
+  # MEDIUM: 사소한 스타일 지적은 걸러지고, 버그 가능성·설계 문제부터 코멘트됨.
   comment_severity_threshold: MEDIUM
+
+  # PR당 리뷰 코멘트 최대 개수. -1은 무제한.
+  # 코멘트가 너무 많다고 느껴지면 10~20 정도로 제한 가능.
   max_review_comments: -1
+
+  # PR이 처음 열릴 때 자동으로 하는 동작
   pull_request_opened:
+    # 사용법 안내 코멘트 (/gemini 명령어 목록). 불필요해서 끔.
     help: false
+    # 변경 내용 요약 코멘트를 PR 본문 아래에 달아줌
     summary: true
+    # 자동 코드리뷰 실행 여부. 이게 꺼져 있으면 /gemini review로 수동 실행만 가능.
     code_review: true

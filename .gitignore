@@ -50,3 +50,7 @@ next-env.d.ts
 ## Panda
 styled-system
 styled-system-studio
+
+## Storybook
+storybook-static
+*storybook.log

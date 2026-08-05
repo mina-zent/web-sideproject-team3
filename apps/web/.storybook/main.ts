@@ -13,6 +13,7 @@ const config: StorybookConfig = {
     options: {},
   },
   stories: ['../src/**/*.stories.@(ts|tsx)'],
+  addons: ['@storybook/addon-docs'],
   // tsconfig paths에 baseUrl이 없어 Storybook 빌더가 별칭을 해석하지 못하므로 명시적으로 매핑한다
   webpackFinal: (webpackConfig) => {
     webpackConfig.resolve ??= {};

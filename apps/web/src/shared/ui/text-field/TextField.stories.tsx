@@ -5,6 +5,13 @@ import { TextField } from './TextField';
 const meta = {
   title: 'DS/TextField',
   component: TextField,
+  parameters: {
+    docs: {
+      description: {
+        component: '레이블 + 입력 + 헬퍼/에러 문구로 구성한 텍스트 필드. default / focus / error 상태를 지원해요.',
+      },
+    },
+  },
   args: { label: '연 순이익 (과세표준)', placeholder: '예: 120,000,000' },
   argTypes: {
     invalid: { control: 'boolean' },

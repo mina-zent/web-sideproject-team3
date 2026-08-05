@@ -7,6 +7,13 @@ import { Card } from './Card';
 const meta = {
   title: 'DS/Card',
   component: Card,
+  parameters: {
+    docs: {
+      description: {
+        component: '콘텐츠 그룹을 담는 카드 표면. radius-3xl · shadow-1 · padding 24.',
+      },
+    },
+  },
 } satisfies Meta<typeof Card>;
 
 export default meta;

@@ -4,6 +4,8 @@ import type { Preview } from '@storybook/nextjs';
 import '../app/globals.css';
 
 const preview: Preview = {
+  // 모든 컴포넌트에 Docs(autodocs) 페이지 자동 생성
+  tags: ['autodocs'],
   parameters: {
     controls: {
       matchers: {

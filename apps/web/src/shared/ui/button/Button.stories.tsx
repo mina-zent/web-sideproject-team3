@@ -6,6 +6,13 @@ import { Button } from './Button';
 const meta = {
   title: 'DS/Button',
   component: Button,
+  parameters: {
+    docs: {
+      description: {
+        component: '기본 액션 버튼. size(xl/l/m/s) × variant(primary/secondary/ghost). primary fill은 화면당 하나만 사용해요.',
+      },
+    },
+  },
   args: { children: '다음' },
   argTypes: {
     size: { control: 'inline-radio', options: ['xl', 'l', 'm', 's'] },

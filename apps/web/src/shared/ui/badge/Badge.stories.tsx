@@ -6,6 +6,14 @@ import { Badge } from './Badge';
 const meta = {
   title: 'DS/Badge',
   component: Badge,
+  parameters: {
+    docs: {
+      description: {
+        component:
+          'washed 배경 + semantic 텍스트 배지. generic tone(neutral/info/success/warning/danger)만 제공하고, 시뮬레이터 등급 매핑은 상위 도메인 레이어에서 처리해요.',
+      },
+    },
+  },
   args: { children: '배지' },
   argTypes: {
     tone: { control: 'inline-radio', options: ['neutral', 'info', 'success', 'warning', 'danger'] },
